@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs"
 
 export default function Navbar() {
   return (
@@ -21,12 +22,17 @@ export default function Navbar() {
           <Link href="/pricing" className="hidden sm:inline-block font-bold uppercase hover:underline decoration-4 underline-offset-4">
             Pricing
           </Link>
-          <Link href="/login">
-            <Button variant="outline" className="h-10 px-4 sm:h-12 sm:px-6 text-xs sm:text-sm">Login</Button>
-          </Link>
-          <Link href="/signup">
-            <Button className="h-10 px-4 sm:h-12 sm:px-6 text-xs sm:text-sm">Start Learning - Free</Button>
-          </Link>
+          <Show when="signed-out">
+            <SignInButton mode="modal" forceRedirectUrl="/dashboard">
+              <Button variant="outline" className="h-10 px-4 sm:h-12 sm:px-6 text-xs sm:text-sm">Login</Button>
+            </SignInButton>
+            <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
+              <Button className="h-10 px-4 sm:h-12 sm:px-6 text-xs sm:text-sm">Start Learning - Free</Button>
+            </SignUpButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton />
+          </Show>
         </div>
       </div>
     </nav>

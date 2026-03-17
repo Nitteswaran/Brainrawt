@@ -1,5 +1,6 @@
+import { UserProfile } from "@clerk/nextjs"
 import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription } from "@/components/ui/card"
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 export default function ProfilePage() {
@@ -18,29 +19,18 @@ export default function ProfilePage() {
         
         {/* PROFILE CARD */}
         <div className="md:col-span-1">
-          <Card className="hover:rotate-0 rotate-1 transition-transform border-4 border-black shadow-neo-lg sticky top-24">
-            <CardHeader className="bg-neo-secondary text-black text-center flex flex-col items-center">
-              <div className="w-24 h-24 bg-white border-4 border-black shadow-neo-sm rotate-2 mb-4 flex items-center justify-center font-black text-4xl uppercase">
-                J
-              </div>
-              <CardTitle className="text-2xl">John Doe</CardTitle>
-              <CardDescription className="text-black/80 font-bold mt-1">Premium Member</CardDescription>
-            </CardHeader>
-            <CardContent className="p-6 bg-white space-y-4">
-              <div>
-                <span className="font-bold text-sm uppercase tracking-widest text-black/60 block mb-1">Email</span>
-                <span className="font-black">john@example.com</span>
-              </div>
-              <div>
-                <span className="font-bold text-sm uppercase tracking-widest text-black/60 block mb-1">Joined</span>
-                <span className="font-black">October 2023</span>
-              </div>
-            </CardContent>
-            <CardFooter className="p-6 bg-neo-muted/20 border-t-4 border-black flex flex-col gap-3">
-              <Button variant="outline" className="w-full bg-white shadow-neo-sm">Edit Profile</Button>
-              <Button variant="secondary" className="w-full shadow-neo-sm border-white text-white bg-neo-accent border-2">Manage Subscription</Button>
-            </CardFooter>
-          </Card>
+          <div className="border-4 border-black shadow-neo-lg bg-white p-2 sticky top-24 rotate-1 hover:rotate-0 transition-transform">
+            <UserProfile 
+               routing="hash"
+               appearance={{
+                 elements: {
+                   cardBox: "shadow-none border-none max-w-full w-full",
+                   navbar: "hidden", 
+                   pageScrollBox: "p-0 sm:p-4"
+                 }
+               }}
+             />
+          </div>
         </div>
 
         {/* STATS & PREFERENCES */}

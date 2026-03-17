@@ -1,9 +1,12 @@
+import { currentUser } from "@clerk/nextjs/server"
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const user = await currentUser();
+  
   return (
     <div className="p-6 md:p-10 max-w-5xl mx-auto flex flex-col gap-12">
       
@@ -11,7 +14,7 @@ export default function DashboardPage() {
       <div className="flex flex-col gap-4">
         <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">Your Training <span className="text-neo-accent neo-stroke-text block sm:inline">Grounds</span></h1>
         <p className="text-xl font-bold bg-white border-4 border-black py-2 px-4 shadow-neo-sm w-fit -rotate-1">
-          Welcome back, Learner. Ready to level up?
+          Welcome back, {user?.firstName || 'Learner'}. Ready to level up?
         </p>
       </div>
 
