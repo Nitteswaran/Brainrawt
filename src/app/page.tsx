@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -29,10 +30,14 @@ export default function Home() {
 
         <div className="relative h-[400px] w-full mt-12 lg:mt-0 flex items-center justify-center">
           {/* Decorative SVG Hero Background */}
-          <img 
+          {/* Decorative SVG Hero Background */}
+          <Image 
             src="/hero_logo.svg" 
-            alt="Hero Illustration" 
+            alt="Hero Illustration"
+            width={500}
+            height={400} 
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-auto z-0 hidden lg:block object-contain pointer-events-none drop-shadow-neo-xl"
+            priority
           />
           
           <Card className="relative z-20 w-80 rotate-2 hover:rotate-0 shadow-neo-xl">
