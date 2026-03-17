@@ -1,6 +1,6 @@
 # Brainrawt - Micro-Learning SaaS Platform
 
-Brainrawt is a daily micro-learning platform where users learn 1 useful skill every day in under 5 minutes. The application features a bold Neo-Brutalist design.
+Brainrawt is a daily micro-learning platform where users learn 1 useful skill every day in under 5 minutes.
 
 ## Features Built
 - **Neo-Brutalist Global Design:** Space Grotesk font, sharp UI limits, thick borders, massive hard shadows, and intentional rotation (`sticker effect`).
