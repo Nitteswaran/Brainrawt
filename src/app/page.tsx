@@ -16,7 +16,7 @@ export default function Home() {
             Learn <span className="text-neo-accent neo-stroke-text block mt-2">1 Skill</span> Everyday.
           </h1>
           <p className="text-xl sm:text-2xl font-bold max-w-lg border-l-4 border-black pl-4 py-2 bg-white shadow-neo-sm -rotate-1">
-            Build unignorable skills in under 5 minutes daily. The anti-boring, dopamine-driven way to level up.
+            Build unignorable micro-skills in under 5 minutes daily. The anti-boring, dopamine-driven way to level up.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link href="/signup">
