@@ -39,7 +39,7 @@ export default function OnboardingPage() {
           </div>
 
           <div className="mt-8">
-            <label className="font-black uppercase tracking-wide text-lg mb-2 block">What's your main learning goal?</label>
+            <label className="font-black uppercase tracking-wide text-lg mb-2 block">What&apos;s your main learning goal?</label>
             <div className="relative">
               <select className="flex h-14 w-full rounded-none border-4 border-black bg-white px-4 py-2 text-lg font-bold focus-visible:bg-neo-secondary focus-visible:shadow-neo-sm focus-visible:outline-none appearance-none cursor-pointer">
                 <option value="">Select a goal...</option>

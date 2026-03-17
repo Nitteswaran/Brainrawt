@@ -37,7 +37,7 @@ export default function Home() {
           
           <Card className="relative z-20 w-80 rotate-2 hover:rotate-0 shadow-neo-xl">
             <CardHeader className="bg-neo-accent text-white border-b-4 border-black">
-              <Badge variant="outline" className="w-fit mb-2 shadow-neo-sm border-2">Today's Skill</Badge>
+              <Badge variant="outline" className="w-fit mb-2 shadow-neo-sm border-2">Today&apos;s Skill</Badge>
               <CardTitle className="text-white">Active Listening</CardTitle>
             </CardHeader>
             <CardContent className="mt-4 p-6 pt-0">
@@ -63,7 +63,7 @@ export default function Home() {
       {/* HOW IT WORKS BANNER */}
       <div className="w-full border-y-4 border-black bg-neo-secondary py-4 overflow-hidden flex whitespace-nowrap">
         <div className="text-2xl font-black uppercase tracking-widest px-4">
-          ★ LESS THEORY ★ MORE ACTION ★ NO FLUFF ★ BUILD XP ★ DON'T BREAK THE STREAK ★ LESS THEORY ★ MORE ACTION ★ NO FLUFF ★ BUILD XP
+          ★ LESS THEORY ★ MORE ACTION ★ NO FLUFF ★ BUILD XP ★ DON&apos;T BREAK THE STREAK ★ LESS THEORY ★ MORE ACTION ★ NO FLUFF ★ BUILD XP
         </div>
       </div>
 

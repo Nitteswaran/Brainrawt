@@ -38,7 +38,7 @@ export function Quiz({ questions }: QuizProps) {
     return (
       <div className="border-4 border-black p-8 bg-neo-accent text-white shadow-neo-md text-center rotate-1 relative z-10">
         <h3 className="font-black text-4xl uppercase mb-4">Quiz Completed!</h3>
-        <p className="font-bold text-xl mb-6">You've solidified your knowledge. +50 XP</p>
+        <p className="font-bold text-xl mb-6">You&apos;ve solidified your knowledge. +50 XP</p>
         <Badge className="bg-white text-black text-lg px-6 py-2 shadow-neo-sm border-2 border-black inline-block">+50 XP Earned</Badge>
       </div>
     )

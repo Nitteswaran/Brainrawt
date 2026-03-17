@@ -22,7 +22,7 @@ export default function LoginPage() {
           <Badge className="w-fit mb-2 border-2 bg-white text-black hover:rotate-0 shadow-neo-sm">Welcome Back</Badge>
           <CardTitle>Login to Brainrawt</CardTitle>
           <CardDescription className="text-black/80 font-bold mt-2">
-            Don't break your streak. Re-enter the arena.
+            Don&apos;t break your streak. Re-enter the arena.
           </CardDescription>
         </CardHeader>
         <CardContent className="mt-6 flex flex-col gap-4">

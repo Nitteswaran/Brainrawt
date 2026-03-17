@@ -14,7 +14,7 @@ export default function PricingPage() {
           <span className="bg-neo-secondary px-2 border-4 border-black shadow-neo-sm rotate-1 inline-block mt-2">Yourself</span>
         </h1>
         <p className="text-xl sm:text-2xl font-bold bg-white border-4 border-black p-4 shadow-neo-sm rotate-[0.5deg]">
-          Start for free to test the waters. Upgrade when you're ready to get serious and generate infinite AI skills.
+          Start for free to test the waters. Upgrade when you&apos;re ready to get serious and generate infinite AI skills.
         </p>
       </div>
 

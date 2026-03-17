@@ -18,7 +18,7 @@ export default function DashboardPage() {
       {/* TODAY'S SKILL */}
       <section className="flex flex-col gap-6">
         <div className="flex items-center gap-4">
-          <h2 className="text-3xl font-black uppercase border-b-4 border-black pb-2">Today's Mission</h2>
+          <h2 className="text-3xl font-black uppercase border-b-4 border-black pb-2">Today&apos;s Mission</h2>
           <Badge className="rotate-3 shadow-neo-sm">+100 XP</Badge>
         </div>
         

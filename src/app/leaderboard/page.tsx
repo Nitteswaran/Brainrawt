@@ -17,7 +17,7 @@ export default function LeaderboardPage() {
       <div className="flex flex-col gap-4">
         <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">The <span className="text-neo-secondary neo-stroke-text block sm:inline">Arena</span></h1>
         <p className="text-xl font-bold bg-white border-4 border-black py-2 px-4 shadow-neo-sm w-fit rotate-1">
-          Compete globally. Who's the most skilled?
+          Compete globally. Who&apos;s the most skilled?
         </p>
       </div>
 

@@ -11,7 +11,7 @@ export default function Sidebar() {
         </div>
 
         <nav className="flex flex-col gap-4">
-          <Link href="/dashboard" className="font-black text-lg uppercase hover:underline decoration-4 underline-offset-4">Today's Skill</Link>
+          <Link href="/dashboard" className="font-black text-lg uppercase hover:underline decoration-4 underline-offset-4">Today&apos;s Skill</Link>
           <Link href="/library" className="font-black text-lg uppercase hover:underline decoration-4 underline-offset-4">Library</Link>
           <Link href="/profile" className="font-black text-lg uppercase hover:underline decoration-4 underline-offset-4">Profile</Link>
           <Link href="/leaderboard" className="font-black text-lg uppercase hover:underline decoration-4 underline-offset-4">Leaderboard</Link>
