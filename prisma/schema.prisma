@@ -1,0 +1,83 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  passwordHash  String?
+  image         String?
+  xp            Int       @default(0)
+  streak        Int       @default(0)
+  lastLearnedAt DateTime?
+  plan          PlanType  @default(FREE)
+  createdAt     DateTime  @default(now())
+
+  progress      UserProgress[]
+  preferences   UserPreference?
+}
+
+model UserPreference {
+  id               String   @id @default(cuid())
+  userId           String   @unique
+  favoriteCategory String[]
+  learningGoal     String?
+  
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Skill {
+  id            String    @id @default(cuid())
+  title         String
+  category      String
+  difficulty    String    // BEGINNER, INTERMEDIATE, ADVANCED
+  summary       String
+  lesson        String
+  example       String
+  challenge     String
+  estimatedTime Int
+  tags          String[]
+  isAIGenerated Boolean   @default(true)
+  approved      Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+
+  quizzes       Quiz[]
+  progress      UserProgress[]
+}
+
+model Quiz {
+  id        String   @id @default(cuid())
+  skillId   String
+  question  String
+  options   String[]
+  answer    String
+  
+  skill     Skill    @relation(fields: [skillId], references: [id], onDelete: Cascade)
+}
+
+model UserProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  skillId     String
+  completed   Boolean  @default(false)
+  score       Int?
+  completedAt DateTime?
+  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skill       Skill    @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, skillId])
+}
+
+enum PlanType {
+  FREE
+  PREMIUM
+}

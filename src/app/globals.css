@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neo-background text-neo-foreground font-sans;
+  }
+}
+
+.neo-shadow-text {
+  text-shadow: 4px 4px 0px #000;
+}
+
+.neo-stroke-text {
+  -webkit-text-stroke: 2px black;
+  color: transparent;
+}
