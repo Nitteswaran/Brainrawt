@@ -36,40 +36,43 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="relative h-[400px] w-full mt-12 lg:mt-0 flex items-center justify-center">
-          {/* Decorative SVG Hero Background */}
-          {/* Decorative SVG Hero Background */}
-          <Image 
-            src="/hero_logo.svg" 
-            alt="Hero Illustration"
-            width={500}
-            height={400} 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-auto z-0 hidden lg:block object-contain pointer-events-none drop-shadow-neo-xl"
-            priority
-          />
-          
-          <Card className="relative z-20 w-80 rotate-2 hover:rotate-0 shadow-neo-xl">
-            <CardHeader className="bg-neo-accent text-white border-b-4 border-black">
-              <Badge variant="outline" className="w-fit mb-2 shadow-neo-sm border-2">Today&apos;s Skill</Badge>
-              <CardTitle className="text-white">Active Listening</CardTitle>
-            </CardHeader>
-            <CardContent className="mt-4 p-6 pt-0">
-              <CardDescription className="mb-4 text-black">
-                Master the 3-second pause to command respect in any conversation.
-              </CardDescription>
-              <div className="space-y-2 mb-6">
-                <div className="h-4 bg-slate-200 border-2 border-black w-full" />
-                <div className="h-4 bg-slate-200 border-2 border-black w-3/4" />
-                <div className="h-4 bg-slate-200 border-2 border-black w-5/6" />
-              </div>
-              <Button className="w-full h-12 shadow-neo-sm">Start 3-Min Lesson</Button>
-            </CardContent>
-          </Card>
+        <div className="flex flex-col items-center gap-6 w-full mt-4 lg:mt-0">
+          {/* Logo Banner — above, bigger, rounded */}
+          <div className="w-full flex justify-center">
+            <Image
+              src="/hero_logo.svg"
+              alt="Hero Illustration"
+              width={520}
+              height={340}
+              className="w-full max-w-[360px] sm:max-w-[440px] lg:max-w-[520px] h-auto rounded-3xl object-contain drop-shadow-[6px_6px_0px_rgba(0,0,0,0.15)]"
+              priority
+            />
+          </div>
 
-          {/* Floating badge */}
-          <Badge variant="secondary" className="absolute -top-6 -right-6 z-30 rotate-12 text-lg py-2 px-4 shadow-neo-sm border-4 border-black">
-            +50 XP
-          </Badge>
+          {/* Card Banner — below the logo */}
+          <div className="relative">
+            <Card className="w-72 sm:w-80 rotate-2 hover:rotate-0 shadow-neo-xl transition-transform">
+              <CardHeader className="bg-neo-accent text-white border-b-4 border-black">
+                <Badge variant="outline" className="w-fit mb-2 shadow-neo-sm border-2">Today&apos;s Skill</Badge>
+                <CardTitle className="text-white">Active Listening</CardTitle>
+              </CardHeader>
+              <CardContent className="mt-4 p-6 pt-0">
+                <CardDescription className="mb-4 text-black">
+                  Master the 3-second pause to command respect in any conversation.
+                </CardDescription>
+                <div className="space-y-2 mb-6">
+                  <div className="h-4 bg-slate-200 border-2 border-black w-full" />
+                  <div className="h-4 bg-slate-200 border-2 border-black w-3/4" />
+                  <div className="h-4 bg-slate-200 border-2 border-black w-5/6" />
+                </div>
+                <Button className="w-full h-12 shadow-neo-sm">Start 3-Min Lesson</Button>
+              </CardContent>
+            </Card>
+            {/* Floating badge */}
+            <Badge variant="secondary" className="absolute -top-4 -right-4 z-30 rotate-12 text-lg py-2 px-4 shadow-neo-sm border-4 border-black">
+              +50 XP
+            </Badge>
+          </div>
         </div>
       </section>
 
