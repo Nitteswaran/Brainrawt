@@ -5,7 +5,7 @@ const LEADERBOARD_DATA = [
   { rank: 1, name: "Alex R.", xp: 14500, streak: 142, tier: "Grandmaster" },
   { rank: 2, name: "Sarah J.", xp: 12400, streak: 98, tier: "Master" },
   { rank: 3, name: "Michael T.", xp: 11200, streak: 84, tier: "Master" },
-  { rank: 4, name: "You", xp: 1450, streak: 12, tier: "Novice" },
+  { rank: 4, name: "You", xp: 0, streak: 0, tier: "Beginner" },
   { rank: 5, name: "David M.", xp: 950, streak: 5, tier: "Beginner" },
 ]
 

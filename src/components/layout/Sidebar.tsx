@@ -6,8 +6,8 @@ export default function Sidebar() {
     <aside className="w-64 border-r-4 border-black bg-neo-muted/20 hidden md:block flex-shrink-0 min-h-[calc(100vh-76px)]">
       <div className="p-6 flex flex-col h-full gap-8">
         <div className="flex flex-col gap-2">
-          <Badge className="w-fit mb-2 shadow-neo-sm border-2">XP: 1,450</Badge>
-          <Badge variant="secondary" className="w-fit shadow-neo-sm border-2">Streak: 12 Days 🔥</Badge>
+          <Badge className="w-fit mb-2 shadow-neo-sm border-2">XP: 0</Badge>
+          <Badge variant="secondary" className="w-fit shadow-neo-sm border-2">Streak: 0 Days 🔥</Badge>
         </div>
 
         <nav className="flex flex-col gap-4">

@@ -15,18 +15,19 @@ export default function ProfilePage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="flex flex-col gap-12">
         
-        {/* PROFILE CARD */}
-        <div className="md:col-span-1">
-          <div className="border-4 border-black shadow-neo-lg bg-white p-2 sticky top-24 rotate-1 hover:rotate-0 transition-transform">
+        {/* PROFILE CUSTOMIZATION CARD */}
+        <div className="w-full">
+          <div className="border-4 border-black shadow-neo-lg bg-white p-2 rotate-1 hover:rotate-0 transition-transform overflow-hidden">
             <UserProfile 
                routing="hash"
                appearance={{
                  elements: {
                    cardBox: "shadow-none border-none max-w-full w-full",
                    navbar: "hidden", 
-                   pageScrollBox: "p-0 sm:p-4"
+                   pageScrollBox: "p-0 sm:p-4",
+                   rootBox: "w-full"
                  }
                }}
              />
@@ -34,7 +35,7 @@ export default function ProfilePage() {
         </div>
 
         {/* STATS & PREFERENCES */}
-        <div className="md:col-span-2 flex flex-col gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           <Card className="rotate-0 shadow-neo-md border-4 border-black group hover:-translate-y-1 transition-transform">
             <CardHeader className="bg-white border-b-4 border-black">
@@ -66,18 +67,25 @@ export default function ProfilePage() {
               <CardTitle className="text-2xl text-black">Achievements</CardTitle>
             </CardHeader>
             <CardContent className="p-6 bg-white flex flex-col gap-4">
-              <div className="flex items-center gap-4 border-4 border-black p-4 shadow-neo-sm rotate-1">
-                 <div className="text-4xl">🔥</div>
-                 <div>
+              <div className="flex items-center gap-4 border-4 border-black p-4 shadow-neo-sm rotate-1 bg-slate-50">
+                 <div className="text-4xl grayscale opacity-50">🔥</div>
+                 <div className="opacity-70">
                    <h4 className="font-black uppercase">7-Day Streak</h4>
-                   <p className="font-bold text-sm">Completed one week of daily learning.</p>
+                   <p className="font-bold text-sm">Complete 7 days of daily learning. (0/7)</p>
                  </div>
               </div>
               <div className="flex items-center gap-4 border-4 border-black p-4 shadow-neo-sm -rotate-1 bg-slate-50">
                  <div className="text-4xl grayscale opacity-50">🧠</div>
                  <div className="opacity-70">
                    <h4 className="font-black uppercase">First 500 XP</h4>
-                   <p className="font-bold text-sm">Earn 500 XP points. (150 to go)</p>
+                   <p className="font-bold text-sm">Earn 500 XP points. (500 to go)</p>
+                 </div>
+              </div>
+              <div className="flex items-center gap-4 border-4 border-black p-4 shadow-neo-sm rotate-1 bg-slate-50">
+                 <div className="text-4xl grayscale opacity-50">⭐</div>
+                 <div className="opacity-70">
+                   <h4 className="font-black uppercase">First Skill Mastered</h4>
+                   <p className="font-bold text-sm">Complete your first lesson to unlock.</p>
                  </div>
               </div>
             </CardContent>
