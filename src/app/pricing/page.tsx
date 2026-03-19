@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { UpgradeButton } from "@/components/pricing/UpgradeButton"
 
 export default function PricingPage() {
   return (
@@ -68,9 +69,7 @@ export default function PricingPage() {
               </ul>
             </CardContent>
             <CardFooter className="bg-white justify-center border-t-4 border-black flex-none p-6 mt-auto">
-              <Link href="/signup" className="w-full">
-                <Button className="w-full text-lg h-16 bg-neo-secondary text-black hover:bg-neo-secondary/90 border-t-4 border-l-4 shadow-neo-sm border-black">Upgrade Now</Button>
-              </Link>
+              <UpgradeButton />
             </CardFooter>
           </Card>
         </div>

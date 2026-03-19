@@ -6,12 +6,24 @@ import Link from "next/link"
 import { DashboardStats } from "@/components/dashboard/DashboardStats"
 import { CompletedSkillsSection } from "@/components/dashboard/CompletedSkillsSection"
 
-export default async function DashboardPage() {
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ upgraded?: string }>;
+}) {
   const user = await currentUser();
+  const { upgraded } = await searchParams;
   
   return (
     <div className="p-6 md:p-10 max-w-5xl mx-auto flex flex-col gap-12">
       
+      {upgraded === "true" && (
+        <div className="border-4 border-black p-6 bg-green-400 shadow-neo-md rotate-1 animate-bounce-once text-center z-50">
+          <h2 className="text-3xl font-black uppercase mb-2">🚀 Welcome to Premium!</h2>
+          <p className="font-bold text-lg">Your account has been upgraded. Unleash the beast!</p>
+        </div>
+      )}
+
       {/* HEADER */}
       <div className="flex flex-col gap-4">
         <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">Your Training <span className="text-neo-accent neo-stroke-text block sm:inline">Grounds</span></h1>
