@@ -3,6 +3,8 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter }
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { DashboardStats } from "@/components/dashboard/DashboardStats"
+import { CompletedSkillsSection } from "@/components/dashboard/CompletedSkillsSection"
 
 export default async function DashboardPage() {
   const user = await currentUser();
@@ -27,7 +29,7 @@ export default async function DashboardPage() {
         
         <Card className="hover:-translate-y-2 hover:shadow-neo-xl rotate-1 group w-full bg-neo-secondary border-black shadow-[12px_12px_0px_0px_#FF6B6B]">
           <CardHeader className="bg-white border-b-4 border-black">
-            <Badge variant="outline" className="w-fit mb-2 shadow-neo-sm">Thinking & Productivity</Badge>
+            <Badge variant="outline" className="w-fit mb-2 shadow-neo-sm">Thinking &amp; Productivity</Badge>
             <CardTitle className="text-3xl">The 2-Minute Rule</CardTitle>
             <CardDescription className="text-black text-lg font-bold mt-2">If it takes less than 2 minutes, do it now—instantly kill procrastination.</CardDescription>
           </CardHeader>
@@ -44,31 +46,12 @@ export default async function DashboardPage() {
         </Card>
       </section>
 
-      {/* STATS OVERVIEW */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="bg-neo-muted/50 rotate-1 shadow-neo-sm hover:shadow-neo-md hover:-translate-y-1">
-          <CardContent className="p-6 flex flex-col items-center justify-center text-center gap-2 mt-0">
-            <span className="text-5xl font-black text-neo-accent drop-shadow-[2px_2px_0px_#000]">0</span>
-            <span className="font-bold uppercase tracking-widest text-sm text-black pt-2">Day Streak 🔥</span>
-          </CardContent>
-        </Card>
-        
-        <Card className="bg-neo-secondary/50 -rotate-1 shadow-neo-sm hover:shadow-neo-md hover:-translate-y-1">
-          <CardContent className="p-6 flex flex-col items-center justify-center text-center gap-2 mt-0">
-            <span className="text-5xl font-black text-white drop-shadow-[2px_2px_0px_#FF6B6B] neo-stroke-text">0</span>
-            <span className="font-bold uppercase tracking-widest text-sm pt-2">Total XP ⭐</span>
-          </CardContent>
-        </Card>
-        
-        <Card className="bg-white rotate-2 shadow-neo-sm hover:shadow-neo-md hover:-translate-y-1">
-          <CardContent className="p-6 flex flex-col items-center justify-center text-center gap-2 mt-0">
-            <span className="text-5xl font-black text-neo-muted drop-shadow-[2px_2px_0px_#000]">0</span>
-            <span className="font-bold uppercase tracking-widest text-sm pt-2">Skills Mastered 🧠</span>
-          </CardContent>
-        </Card>
-      </section>
+      {/* STATS — live from localStorage */}
+      <DashboardStats />
+
+      {/* COMPLETED SKILLS */}
+      <CompletedSkillsSection />
 
     </div>
   )
 }
-

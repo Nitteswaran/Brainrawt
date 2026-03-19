@@ -10,9 +10,10 @@ interface QuizProps {
     options: string[]
     answer: string
   }[]
+  onComplete?: () => void
 }
 
-export function Quiz({ questions }: QuizProps) {
+export function Quiz({ questions, onComplete }: QuizProps) {
   const [currentStep, setCurrentStep] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
@@ -31,6 +32,7 @@ export function Quiz({ questions }: QuizProps) {
       setIsCorrect(null)
     } else {
       setCompleted(true)
+      onComplete?.()
     }
   }
 

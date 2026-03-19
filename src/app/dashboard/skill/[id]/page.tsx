@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
-import { Quiz } from "@/components/learning/Quiz"
+import { SkillCompletionHandler } from "@/components/learning/SkillCompletionHandler"
 import { ALL_SKILLS, getSkillBySlug } from "@/lib/skills-data"
 import { notFound } from "next/navigation"
 import { LessonAccessGate } from "@/components/learning/LessonAccessGate"
@@ -61,7 +61,13 @@ export default async function SkillPage({ params }: { params: Promise<{ id: stri
 
           <div className="border-l-[8px] border-black pl-6 pt-4 border-neo-foreground">
             <h2 className="text-3xl font-black uppercase mb-4 drop-shadow-[2px_2px_0px_#FF6B6B] text-black bg-white inline-block px-2 border-4 border-black shadow-neo-sm rotate-2">4. Knowledge Check</h2>
-            <Quiz questions={skill.quiz} />
+            <SkillCompletionHandler
+              slug={skill.slug}
+              title={skill.title}
+              category={skill.category}
+              categoryIcon={skill.categoryIcon}
+              questions={skill.quiz}
+            />
           </div>
         </div>
 

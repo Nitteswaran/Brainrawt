@@ -1,33 +1,43 @@
 import { NextResponse } from 'next/server'
+import Stripe from 'stripe'
+import { auth } from '@clerk/nextjs/server'
 
-export async function POST(req: Request) {
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: '2025-02-24.acacia',
+})
+
+export async function POST() {
   try {
-    const { priceId, userId } = await req.json()
+    const { userId } = await auth()
 
-    // 1. In a real app with Stripe SDK:
-    // const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-    // const session = await stripe.checkout.sessions.create({
-    //   mode: 'subscription',
-    //   payment_method_types: ['card'],
-    //   line_items: [{ price: priceId, quantity: 1 }],
-    //   success_url: `${process.env.NEXT_PUBLIC_APP_URL}/dashboard?upgraded=true`,
-    //   cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/pricing`,
-    //   client_reference_id: userId,
-    // });
-    // return NextResponse.json({ url: session.url })
+    if (!userId) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
 
-    // 2. Mock Implementation for Development WITHOUT API key
-    console.log(`[STRIPE MOCK] Creating checkout session for user ${userId} and price ${priceId}`)
-    
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    const priceId = process.env.STRIPE_PRICE_ID
+    if (!priceId || priceId.startsWith('price_REPLACE')) {
+      return NextResponse.json(
+        { error: 'Stripe Price ID is not configured. Please set STRIPE_PRICE_ID in .env' },
+        { status: 500 }
+      )
+    }
 
-    // Return a fake URL to redirect the user back to the dashboard simulating a success 
-    // In actual dev this would be a Stripe hosted checkout URL
-    return NextResponse.json({ url: '/dashboard?upgraded=true' })
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 
+    const session = await stripe.checkout.sessions.create({
+      mode: 'subscription',
+      payment_method_types: ['card'],
+      line_items: [{ price: priceId, quantity: 1 }],
+      success_url: `${appUrl}/dashboard?upgraded=true`,
+      cancel_url: `${appUrl}/pricing`,
+      // Attach the Clerk userId so the webhook can look up the user
+      client_reference_id: userId,
+      metadata: { userId },
+    })
+
+    return NextResponse.json({ url: session.url })
   } catch (error) {
-    console.error("Error creating checkout session:", error)
-    return NextResponse.json({ error: "Failed to create checkout session" }, { status: 500 })
+    console.error('[STRIPE CHECKOUT]', error)
+    return NextResponse.json({ error: 'Failed to create checkout session' }, { status: 500 })
   }
 }
