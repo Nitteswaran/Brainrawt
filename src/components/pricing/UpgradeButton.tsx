@@ -2,13 +2,12 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { useUser, useSignIn } from "@clerk/nextjs"
+import { useUser } from "@clerk/nextjs"
 import { Button } from "@/components/ui/button"
 import { Loader2 } from "lucide-react"
 
 export function UpgradeButton() {
   const { isLoaded, user } = useUser()
-  const { signIn } = useSignIn()
   const router = useRouter()
   const [loading, setLoading] = useState(false)
 
