@@ -28,3 +28,39 @@ export async function GET() {
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 })
   }
 }
+
+export async function POST(req: Request) {
+  try {
+    const { userId } = await auth()
+    if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+
+    const { slug } = await req.json()
+    if (!slug) return NextResponse.json({ error: "Missing slug" }, { status: 400 })
+
+    // Upsert UserProgress to record the hit
+    await prisma.userProgress.upsert({
+      where: {
+        userId_skillId: {
+          userId,
+          skillId: slug
+        }
+      },
+      update: {
+        // Just updating the timestamp if it already exists but isn't completed
+        completedAt: new Date()
+      },
+      create: {
+        userId,
+        skillId: slug,
+        completed: false,
+        completedAt: new Date(),
+        score: 0
+      }
+    })
+
+    return NextResponse.json({ success: true })
+  } catch (error) {
+    console.error("[POST_DAILY_LIMIT_ERROR]", error)
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 })
+  }
+}

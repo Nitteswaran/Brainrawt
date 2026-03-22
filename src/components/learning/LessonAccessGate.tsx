@@ -46,35 +46,76 @@ interface LessonAccessGateProps {
 }
 
 export function LessonAccessGate({ skillSlug, children }: LessonAccessGateProps) {
-  const { user, isLoaded } = useUser()
+  const { user, isLoaded, isSignedIn } = useUser()
   const [hasAccess, setHasAccess] = useState<boolean | null>(null)
   const [lessonsUsed, setLessonsUsed] = useState(0)
 
   useEffect(() => {
     if (!isLoaded) return
 
-    const isPremium = user?.publicMetadata?.plan === "PREMIUM"
-    
-    if (isPremium) {
-      setHasAccess(true)
-      recordLesson(skillSlug)
-      return
+    const checkAccess = async () => {
+      const isPremium = user?.publicMetadata?.plan === "PREMIUM"
+      
+      if (isPremium) {
+        setHasAccess(true)
+        // Record hit in DB if signed in
+        if (isSignedIn) {
+          await fetch("/api/user/daily-limits", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ slug: skillSlug }),
+          })
+        } else {
+          recordLesson(skillSlug)
+        }
+        return
+      }
+
+      let currentCount = 0
+      let alreadyAccessed = false
+
+      if (isSignedIn) {
+        // Fetch from DB
+        const res = await fetch("/api/user/daily-limits")
+        if (res.ok) {
+          const data = await res.json()
+          currentCount = data.count
+          // We don't have a specific 'alreadyAccessed' for DB yet without another query, 
+          // but we can assume if they are under limit, they can enter.
+        }
+      } else {
+        const dailyData = getDailyData()
+        alreadyAccessed = dailyData.slugs.includes(skillSlug)
+        currentCount = dailyData.slugs.length
+      }
+
+      setLessonsUsed(currentCount)
+
+      if (alreadyAccessed || currentCount < DAILY_LIMIT_FREE) {
+        setHasAccess(true)
+        if (isSignedIn) {
+          await fetch("/api/user/daily-limits", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ slug: skillSlug }),
+          })
+          // Update count after recording
+          const res = await fetch("/api/user/daily-limits")
+          if (res.ok) {
+            const data = await res.json()
+            setLessonsUsed(data.count)
+          }
+        } else {
+          recordLesson(skillSlug)
+          setLessonsUsed(getDailyData().slugs.length)
+        }
+      } else {
+        setHasAccess(false)
+      }
     }
 
-    const dailyData = getDailyData()
-    const alreadyAccessed = dailyData.slugs.includes(skillSlug)
-    const currentCount = dailyData.slugs.length
-
-    setLessonsUsed(currentCount)
-
-    if (alreadyAccessed || currentCount < DAILY_LIMIT_FREE) {
-      setHasAccess(true)
-      recordLesson(skillSlug)
-      setLessonsUsed(getDailyData().slugs.length)
-    } else {
-      setHasAccess(false)
-    }
-  }, [isLoaded, user, skillSlug])
+    checkAccess()
+  }, [isLoaded, user, isSignedIn, skillSlug])
 
   if (!isLoaded || hasAccess === null) {
     return (

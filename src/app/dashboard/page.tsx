@@ -58,7 +58,7 @@ export default async function DashboardPage({
         </Card>
       </section>
 
-      {/* STATS — live from localStorage */}
+      {/* STATS — live from Database/localStorage */}
       <DashboardStats />
 
       {/* COMPLETED SKILLS */}
