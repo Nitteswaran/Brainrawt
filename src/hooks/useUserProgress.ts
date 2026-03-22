@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useUser } from "@clerk/nextjs"
-import { getProgress, SkillProgress, syncLocalToDb, CompletedSkill } from "@/lib/skill-progress"
+import { getProgress, SkillProgress, syncLocalToDb } from "@/lib/skill-progress"
 import { ALL_SKILLS } from "@/lib/skills-data"
 
 export function useUserProgress() {
@@ -33,7 +33,7 @@ export function useUserProgress() {
               totalXP: dbData.xp,
               streak: dbData.streak,
               lastLearnedDate: dbData.lastLearnedAt ? dbData.lastLearnedAt.split("T")[0] : null,
-              completedSkills: dbData.completedSkills.map((s: any) => {
+              completedSkills: dbData.completedSkills.map((s: { skillId: string, completedAt: string }) => {
                 const meta = ALL_SKILLS.find(skill => skill.slug === s.skillId)
                 return {
                   slug: s.skillId,

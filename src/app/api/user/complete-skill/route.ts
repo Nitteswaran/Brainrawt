@@ -11,14 +11,14 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
     }
 
-    const { slug, title, category, categoryIcon } = await req.json()
+    const { slug, title, category } = await req.json()
 
     if (!slug || !title) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
 
     // 1. Ensure Skill exists in DB
-    const skill = await prisma.skill.upsert({
+    await prisma.skill.upsert({
       where: { id: slug },
       update: {
         title,
