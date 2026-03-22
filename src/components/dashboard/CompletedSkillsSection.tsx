@@ -1,32 +1,39 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { getProgress, CompletedSkill } from "@/lib/skill-progress"
+import { useUserProgress } from "@/hooks/useUserProgress"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Skeleton } from "@/components/ui/skeleton"
 import Link from "next/link"
 
 function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  })
+  try {
+    return new Date(iso).toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    })
+  } catch (e) {
+    return "Recently"
+  }
 }
 
 export function CompletedSkillsSection() {
-  const [completedSkills, setCompletedSkills] = useState<CompletedSkill[]>([])
-  const [mounted, setMounted] = useState(false)
+  const { progress, loading } = useUserProgress()
 
-  useEffect(() => {
-    const progress = getProgress()
-    // Most recent first
-    setCompletedSkills([...progress.completedSkills].reverse())
-    setMounted(true)
-  }, [])
+  if (loading) {
+    return (
+      <section className="flex flex-col gap-6">
+        <h2 className="text-3xl font-black uppercase border-b-4 border-black pb-2">Completed Skills</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[1, 2].map((i) => (
+            <Skeleton key={i} className="h-48 w-full shadow-neo-sm" />
+          ))}
+        </div>
+      </section>
+    )
+  }
 
-  if (!mounted) return null
+  const completedSkills = [...(progress?.completedSkills || [])].reverse()
 
   if (completedSkills.length === 0) {
     return (

@@ -57,13 +57,34 @@ function saveProgress(progress: SkillProgress): void {
 /**
  * Returns true if a skill was newly completed (false if already completed before).
  */
+/**
+ * Returns true if a skill was newly completed (false if already completed before).
+ * If userId is provided, it also syncs with the database.
+ */
+export async function completeSkillInDb(
+  slug: string,
+  meta: { title: string; category: string; categoryIcon: string }
+): Promise<{ success: boolean; newlyCompleted: boolean }> {
+  try {
+    const response = await fetch("/api/user/complete-skill", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug, ...meta }),
+    })
+    return await response.json()
+  } catch (error) {
+    console.error("Failed to sync skill completion:", error)
+    return { success: false, newlyCompleted: false }
+  }
+}
+
 export function completeSkill(
   slug: string,
   meta: { title: string; category: string; categoryIcon: string }
 ): boolean {
   const progress = getProgress()
 
-  // Don't double-count
+  // Don't double-count in localStorage
   if (progress.completedSkills.some((s) => s.slug === slug)) {
     return false
   }
@@ -72,12 +93,10 @@ export function completeSkill(
 
   // Update streak
   if (progress.lastLearnedDate === today) {
-    // Already learned today, streak stays the same
+    // Already learned today
   } else if (progress.lastLearnedDate === yesterdayString()) {
-    // Consecutive day
     progress.streak += 1
   } else {
-    // Gap or first time
     progress.streak = 1
   }
 
@@ -97,9 +116,25 @@ export function completeSkill(
   return true
 }
 
+export async function syncLocalToDb() {
+  const progress = getProgress()
+  if (progress.completedSkills.length === 0 && progress.totalXP === 0) return
+
+  try {
+    await fetch("/api/user/sync", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ localStorageProgress: progress }),
+    })
+  } catch (error) {
+    console.error("Failed to sync progress to database:", error)
+  }
+}
+
 export function isSkillCompleted(slug: string): boolean {
   const progress = getProgress()
   return progress.completedSkills.some((s) => s.slug === slug)
 }
 
 export { XP_PER_SKILL }
+

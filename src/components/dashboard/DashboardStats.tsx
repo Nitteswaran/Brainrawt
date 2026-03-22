@@ -1,15 +1,19 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { getProgress, SkillProgress } from "@/lib/skill-progress"
+import { useUserProgress } from "@/hooks/useUserProgress"
 import { Card, CardContent } from "@/components/ui/card"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export function DashboardStats() {
-  const [progress, setProgress] = useState<SkillProgress | null>(null)
+  const { progress, loading } = useUserProgress()
 
-  useEffect(() => {
-    setProgress(getProgress())
-  }, [])
+  if (loading) {
+    return (
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[1, 2, 3].map((i) => (
+          <Skeleton key={i} className="h-32 w-full border-4 border-black shadow-neo-sm" />
+        ))}
+      </section>
+    )
+  }
 
   const streak = progress?.streak ?? 0
   const totalXP = progress?.totalXP ?? 0

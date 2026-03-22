@@ -1,10 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { completeSkill, isSkillCompleted, XP_PER_SKILL } from "@/lib/skill-progress"
+import { useUser } from "@clerk/nextjs"
+import { completeSkill, completeSkillInDb, isSkillCompleted, XP_PER_SKILL } from "@/lib/skill-progress"
 import { Quiz } from "@/components/learning/Quiz"
 import Link from "next/link"
-
 interface SkillCompletionHandlerProps {
   slug: string
   title: string
@@ -20,6 +20,7 @@ export function SkillCompletionHandler({
   categoryIcon,
   questions,
 }: SkillCompletionHandlerProps) {
+  const { isSignedIn } = useUser()
   const [alreadyCompleted, setAlreadyCompleted] = useState(false)
   const [justCompleted, setJustCompleted] = useState(false)
 
@@ -27,13 +28,19 @@ export function SkillCompletionHandler({
     setAlreadyCompleted(isSkillCompleted(slug))
   }, [slug])
 
-  const handleComplete = () => {
-    const wasNew = completeSkill(slug, { title, category, categoryIcon })
-    if (wasNew) {
-      setJustCompleted(true)
-      setAlreadyCompleted(true)
+  const handleComplete = async () => {
+    // 1. Always save to local for legacy support/guest state
+    completeSkill(slug, { title, category, categoryIcon })
+
+    // 2. If logged in, sync with database
+    if (isSignedIn) {
+      await completeSkillInDb(slug, { title, category, categoryIcon })
     }
+
+    setJustCompleted(true)
+    setAlreadyCompleted(true)
   }
+
 
   // Show completion banner after finishing
   if (justCompleted) {
