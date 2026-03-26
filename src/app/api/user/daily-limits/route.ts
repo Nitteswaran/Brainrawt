@@ -11,7 +11,8 @@ export async function GET() {
     }
 
     // Check if user is premium via session claims (publicMetadata)
-    const isPremium = (sessionClaims as any)?.publicMetadata?.plan === "PREMIUM"
+    const publicMetadata = sessionClaims?.publicMetadata as { plan?: string } | undefined
+    const isPremium = publicMetadata?.plan === "PREMIUM"
     if (isPremium) {
       return NextResponse.json({ count: 0, isPremium: true })
     }

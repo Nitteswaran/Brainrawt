@@ -33,25 +33,25 @@ export default function BlogPage() {
         <section className="prose prose-lg prose-slate max-w-none">
           {/* Intro Section */}
           <p className="text-xl text-slate-600 leading-relaxed italic border-l-8 border-neo-accent pl-6 my-8 font-medium">
-            It’s 2 AM. You’re lying in bed in your hostel room, the blue light of your phone illuminating your tired face. You’ve been scrolling through TikTok and Reels for three hours. What started as a "5-minute break" turned into a dopamine-fueled marathon of short-form content. 
+            It&apos;s 2 AM. You&apos;re lying in bed in your hostel room, the blue light of your phone illuminating your tired face. You&apos;ve been scrolling through TikTok and Reels for three hours. What started as a &quot;5-minute break&quot; turned into a dopamine-fueled marathon of short-form content. 
           </p>
           <p className="font-medium">
-            You feel that familiar weight of guilt. You know you have a midterm next week, a presentation due, and a growing list of skills you <i>actually</i> want to learn. But the thought of sitting down for a two-hour study session feels impossible. You want to improve, you want to be that "top student," but you just can't seem to stay consistent. 
+            You feel that familiar weight of guilt. You know you have a midterm next week, a presentation due, and a growing list of skills you <i>actually</i> want to learn. But the thought of sitting down for a two-hour study session feels impossible. You want to improve, you want to be that &quot;top student,&quot; but you just can&apos;t seem to stay consistent. 
           </p>
           <p className="font-medium">
-            If this sounds like your daily reality, you aren't alone. In 2026, the battle for your attention has never been more intense. The good news? You don't need to fight your brain—you just need to change how you feed it.
+            If this sounds like your daily reality, you aren&apos;t alone. In 2026, the battle for your attention has never been more intense. The good news? You don&apos;t need to fight your brain—you just need to change how you feed it.
           </p>
 
           {/* H2: Why Students Struggle */}
           <h2 className="text-3xl font-black mt-12 mb-6 text-slate-900 uppercase tracking-tight">Why Students Struggle to Stay Consistent in 2026</h2>
           <p>
-            The Malaysian education system is demanding, and the digital world is even more so. Most students fail to stay consistent not because they lack "willpower," but because they are fighting a losing battle against <strong>dopamine addiction</strong>. 
+            The Malaysian education system is demanding, and the digital world is even more so. Most students fail to stay consistent not because they lack &quot;willpower,&quot; but because they are fighting a losing battle against <strong>dopamine addiction</strong>. 
           </p>
           <p>
-            When we consume short-form media, our brains get instant rewards. Traditional studying—opening a thick textbook or watching a 60-minute recorded lecture—simply can't compete with that. The sheer volume of <strong>distractions</strong> from notifications, social pressure, and "FOMO" makes it nearly impossible to maintain deep focus.
+            When we consume short-form media, our brains get instant rewards. Traditional studying—opening a thick textbook or watching a 60-minute recorded lecture—simply can&apos;t compete with that. The sheer volume of <strong>distractions</strong> from notifications, social pressure, and &quot;FOMO&quot; makes it nearly impossible to maintain deep focus.
           </p>
           <p>
-            The biggest hurdle is the <strong>lack of structure</strong>. Many students think they need to block out half their day to be productive. When they can't find that massive block of time, they give up entirely. Learning <strong>how to focus on studying without distractions</strong> starts by acknowledging that your brain is now wired for shorter bursts of information.
+            The biggest hurdle is the <strong>lack of structure</strong>. Many students think they need to block out half their day to be productive. When they can&apos;t find that massive block of time, they give up entirely. Learning <strong>how to focus on studying without distractions</strong> starts by acknowledging that your brain is now wired for shorter bursts of information.
           </p>
 
           {/* H2: What is Microlearning? */}
@@ -60,7 +60,7 @@ export default function BlogPage() {
             Instead of trying to eat the whole elephant at once, microlearning breaks it into bite-sized pieces. <strong>Microlearning for students</strong> is an approach where you acquire knowledge in small, highly focused bursts—usually between 3 to 10 minutes.
           </p>
           <p>
-            Why is it so effective? It’s <strong>backed by psychology</strong>, specifically the "Spacing Effect" and "Chunking." When you learn in small increments, you avoid cognitive overload. Your brain can actually process and retain the information before moving on to the next piece.
+            Why is it so effective? It&apos;s <strong>backed by psychology</strong>, specifically the &quot;Spacing Effect&quot; and &quot;Chunking.&quot; When you learn in small increments, you avoid cognitive overload. Your brain can actually process and retain the information before moving on to the next piece.
           </p>
           <ul className="list-disc pl-6 space-y-2 font-bold uppercase text-sm">
             <li><strong>Retention:</strong> Shorter sessions lead to better long-term memory.</li>
@@ -74,16 +74,16 @@ export default function BlogPage() {
             Procrastination is often a defense mechanism against a task that feels too big. When a task feels overwhelming, your brain chooses the easy path (scrolling!). 
           </p>
           <p>
-            Microlearning lowers the "activation energy" required to start. It is significantly <strong>easier to start</strong> a 5-minute lesson than a 2-hour study block. Once you finish that first small lesson, you get a small win. This <strong>builds momentum</strong>, often leading you to do "just one more." 
+            Microlearning lowers the &quot;activation energy&quot; required to start. It is significantly <strong>easier to start</strong> a 5-minute lesson than a 2-hour study block. Once you finish that first small lesson, you get a small win. This <strong>builds momentum</strong>, often leading you to do &quot;just one more.&quot; 
           </p>
           <p>
-            By focusing on the "micro," you effectively <strong>reduce overwhelm</strong>. When you know exactly <strong>how to stop procrastination studying</strong>, you realize that consistency is more important than intensity.
+            By focusing on the &quot;micro,&quot; you effectively <strong>reduce overwhelm</strong>. When you know exactly <strong>how to stop procrastination studying</strong>, you realize that consistency is more important than intensity.
           </p>
 
           {/* H2: Simple Daily Microlearning System */}
           <h2 className="text-3xl font-black mt-12 mb-6 text-slate-900 uppercase tracking-tight">Simple Daily Microlearning System</h2>
           <p>
-            You don't need a complex planner to start. Use this 4-step system to start to <strong>learn new skills daily</strong>:
+            You don&apos;t need a complex planner to start. Use this 4-step system to start to <strong>learn new skills daily</strong>:
           </p>
           <div className="bg-neo-secondary/10 p-8 rounded-2xl border-4 border-black shadow-neo-sm my-8">
             <ol className="space-y-6 list-none pl-0">
@@ -124,7 +124,7 @@ export default function BlogPage() {
             Most learning platforms were built for the desktop era—hours of video and endless text. <strong>Brainrawt</strong> was built for the mobile-first, short-attention-span generation of Malaysia.
           </p>
           <p>
-            We don't want you to spend hours on our app. We want you to spend 5 minutes getting better, and then go live your life. 
+            We don&apos;t want you to spend hours on our app. We want you to spend 5 minutes getting better, and then go live your life. 
           </p>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 list-none pl-0">
             <li className="p-6 bg-white border-4 border-black shadow-neo-sm">
@@ -151,7 +151,7 @@ export default function BlogPage() {
           <div className="absolute top-0 left-0 w-full h-2 bg-neo-accent" />
           <h3 className="text-4xl font-black mb-4 uppercase italic">Start Learning Smarter Today</h3>
           <p className="text-slate-300 mb-8 max-w-lg mx-auto font-bold uppercase tracking-tight">
-            Join thousands of Malaysian students beating "brain rot" and building real skills, 5 minutes at a time.
+            Join thousands of Malaysian students beating &quot;brain rot&quot; and building real skills, 5 minutes at a time.
           </p>
           <Button 
             asChild
@@ -175,7 +175,7 @@ export default function BlogPage() {
               },
               {
                 q: "Is microlearning effective?",
-                a: "Yes. Studies show that learning in short bursts improves retention by up to 20% compared to long-form study sessions, as it aligns with the brain's natural attention span."
+                a: "Yes. Studies show that learning in short bursts improves retention by up to 20% compared to long-form study sessions, as it aligns with the brain&apos;s natural attention span."
               },
               {
                 q: "How to stop procrastinating?",
