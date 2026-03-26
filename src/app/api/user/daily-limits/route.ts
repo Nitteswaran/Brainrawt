@@ -4,10 +4,16 @@ import { prisma } from "@/lib/prisma"
 
 export async function GET() {
   try {
-    const { userId } = await auth()
+    const { userId, sessionClaims } = await auth()
 
     if (!userId) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+    }
+
+    // Check if user is premium via session claims (publicMetadata)
+    const isPremium = (sessionClaims as any)?.publicMetadata?.plan === "PREMIUM"
+    if (isPremium) {
+      return NextResponse.json({ count: 0, isPremium: true })
     }
 
     const today = new Date()

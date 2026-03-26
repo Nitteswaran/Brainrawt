@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { UpgradeButton } from "@/components/pricing/UpgradeButton"
+import { Show } from "@clerk/nextjs"
 
 export default function PricingPage() {
   return (
@@ -39,9 +40,16 @@ export default function PricingPage() {
               </ul>
             </CardContent>
             <CardFooter className="bg-white justify-center border-t-4 border-black flex-none p-6 mt-auto">
-              <Link href="/signup" className="w-full">
-                <Button variant="outline" className="w-full text-lg h-14 bg-neo-muted/30 border-black">Start Free</Button>
-              </Link>
+              <Show when="signed-out">
+                <Link href="/signup" className="w-full">
+                  <Button variant="outline" className="w-full text-lg h-14 bg-neo-muted/30 border-black">Start Free</Button>
+                </Link>
+              </Show>
+              <Show when="signed-in">
+                <Link href="/dashboard" className="w-full">
+                  <Button variant="outline" className="w-full text-lg h-14 bg-neo-muted/30 border-black">Go to Dashboard</Button>
+                </Link>
+              </Show>
             </CardFooter>
           </Card>
         </div>

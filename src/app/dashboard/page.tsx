@@ -29,9 +29,13 @@ export default async function DashboardPage({
   // Find uncompleted skills
   const availableSkills = ALL_SKILLS.filter(skill => !completedIds.has(skill.slug));
   
-  // Pick a skill - use date as seed so it stays same for the day, but changes if one is completed
-  // Or just pick the first one available
-  const todayMission = availableSkills.length > 0 ? availableSkills[0] : null;
+  // Pick a mission: Use a stable seed based on the date so it doesn't jump around,
+  // but ensure it's always an uncompleted one.
+  const today = new Date().toISOString().split("T")[0];
+  const seed = today.split("-").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  const todayMission = availableSkills.length > 0 
+    ? availableSkills[seed % availableSkills.length] 
+    : null;
   
   return (
     <div className="p-6 md:p-10 max-w-5xl mx-auto flex flex-col gap-12">

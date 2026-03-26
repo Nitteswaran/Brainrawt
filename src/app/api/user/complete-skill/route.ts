@@ -2,12 +2,15 @@ import { NextResponse } from "next/server"
 import { auth } from "@clerk/nextjs/server"
 import { prisma } from "@/lib/prisma"
 import { XP_PER_SKILL } from "@/lib/skill-progress"
+import { currentUser } from "@clerk/nextjs/server"
+import { getOrCreateUser } from "@/lib/user"
 
 export async function POST(req: Request) {
   try {
     const { userId } = await auth()
+    const clerkUser = await currentUser()
 
-    if (!userId) {
+    if (!userId || !clerkUser) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
     }
 
@@ -76,10 +79,11 @@ export async function POST(req: Request) {
     })
 
     // 4. Update User XP and Streak
-    const user = await prisma.user.findUnique({ where: { id: userId } })
-    if (!user) {
-      return NextResponse.json({ error: "User not found" }, { status: 404 })
-    }
+    const user = await getOrCreateUser(
+      userId,
+      clerkUser.emailAddresses[0].emailAddress,
+      `${clerkUser.firstName} ${clerkUser.lastName}`
+    )
 
     const today = new Date().toISOString().split("T")[0]
     const lastLearnedDate = user.lastLearnedAt ? user.lastLearnedAt.toISOString().split("T")[0] : null

@@ -29,7 +29,7 @@ export function useUserProgress() {
             const dbData = await res.json()
             
             // Map DB structure to SkillProgress interface
-            const unified: SkillProgress = {
+            const dbUnified: SkillProgress = {
               totalXP: dbData.xp,
               streak: dbData.streak,
               lastLearnedDate: dbData.lastLearnedAt ? dbData.lastLearnedAt.split("T")[0] : null,
@@ -45,7 +45,14 @@ export function useUserProgress() {
                 }
               })
             }
-            setProgress(unified)
+
+            // Two-way sync: If DB has more progress/XP, update localStorage
+            if (dbUnified.totalXP > (local?.totalXP || 0)) {
+              localStorage.setItem("brainrawt_progress", JSON.stringify(dbUnified))
+              setProgress(dbUnified)
+            } else {
+              setProgress(local || dbUnified)
+            }
           }
         } catch (error) {
           console.error("Failed to fetch DB progress:", error)

@@ -1,13 +1,32 @@
+"use client"
+
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
+import { useUserProgress } from "@/hooks/useUserProgress"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export default function Sidebar() {
+  const { progress, loading } = useUserProgress()
+
   return (
     <aside className="w-64 border-r-4 border-black bg-neo-muted/20 hidden md:block flex-shrink-0 min-h-[calc(100vh-76px)]">
       <div className="p-6 flex flex-col h-full gap-8">
         <div className="flex flex-col gap-2">
-          <Badge className="w-fit mb-2 shadow-neo-sm border-2">XP: 0</Badge>
-          <Badge variant="secondary" className="w-fit shadow-neo-sm border-2">Streak: 0 Days 🔥</Badge>
+          {loading ? (
+            <>
+              <Skeleton className="h-8 w-24 border-2 border-black" />
+              <Skeleton className="h-8 w-32 border-2 border-black" />
+            </>
+          ) : (
+            <>
+              <Badge className="w-fit mb-2 shadow-neo-sm border-2 px-3 py-1 text-sm font-black uppercase">
+                XP: {progress?.totalXP || 0}
+              </Badge>
+              <Badge variant="secondary" className="w-fit shadow-neo-sm border-2 px-3 py-1 text-sm font-black uppercase">
+                Streak: {progress?.streak || 0} Days 🔥
+              </Badge>
+            </>
+          )}
         </div>
 
         <nav className="flex flex-col gap-4">
