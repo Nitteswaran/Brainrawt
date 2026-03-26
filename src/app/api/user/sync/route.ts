@@ -3,6 +3,8 @@ import { auth, currentUser } from "@clerk/nextjs/server"
 import { prisma } from "@/lib/prisma"
 import { getOrCreateUser } from "@/lib/user"
 
+export const dynamic = "force-dynamic"
+
 export async function POST(req: Request) {
   try {
     const { userId } = await auth()

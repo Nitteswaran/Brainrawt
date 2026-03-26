@@ -1,8 +1,7 @@
 // Manages completed skills, XP, and streak in localStorage.
 // Follows the same pattern as brainrawt_daily_lessons in LessonAccessGate.
 
-const PROGRESS_KEY = "brainrawt_progress"
-const XP_PER_SKILL = 100
+import { XP_PER_SKILL, PROGRESS_KEY } from "./constants"
 
 export interface CompletedSkill {
   slug: string

@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server"
 import { auth } from "@clerk/nextjs/server"
 import { prisma } from "@/lib/prisma"
-import { XP_PER_SKILL } from "@/lib/skill-progress"
+import { XP_PER_SKILL } from "@/lib/constants"
 import { currentUser } from "@clerk/nextjs/server"
 import { getOrCreateUser } from "@/lib/user"
+
+export const dynamic = "force-dynamic"
 
 export async function POST(req: Request) {
   try {
