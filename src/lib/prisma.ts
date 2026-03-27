@@ -6,13 +6,6 @@ const globalForPrisma = globalThis as unknown as {
 
 export const prisma =
   globalForPrisma.prisma ??
-  new PrismaClient({
-    // @ts-expect-error - bypassing local prisma typing to ensure Vercel build works with fallback URL
-    datasources: {
-      db: {
-        url: process.env.DATABASE_URL || "postgresql://dummy@localhost:5432/db",
-      },
-    },
-  });
+  new PrismaClient();
 
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
