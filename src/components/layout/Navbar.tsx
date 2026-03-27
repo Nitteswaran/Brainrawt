@@ -22,6 +22,9 @@ export default function Navbar() {
           <Link href="/pricing" className="hidden sm:inline-block font-bold uppercase hover:underline decoration-4 underline-offset-4">
             Pricing
           </Link>
+          <Link href="/blog/microlearning-for-students-malaysia-2026" className="hidden sm:inline-block font-bold uppercase hover:underline decoration-4 underline-offset-4">
+            Blog
+          </Link>
           <Show when="signed-out">
             <SignInButton mode="modal" forceRedirectUrl="/dashboard">
               <Button variant="outline" className="h-10 px-4 sm:h-12 sm:px-6 text-xs sm:text-sm">Login</Button>

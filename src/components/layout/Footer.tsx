@@ -21,6 +21,7 @@ export default function Footer() {
           <h4 className="font-black uppercase text-lg mb-2">Platform</h4>
           <Link href="/library" className="font-bold hover:underline decoration-2 underline-offset-4">Skill Library</Link>
           <Link href="/pricing" className="font-bold hover:underline decoration-2 underline-offset-4">Pricing</Link>
+          <Link href="/blog/microlearning-for-students-malaysia-2026" className="font-bold hover:underline decoration-2 underline-offset-4">Blog</Link>
           <Link href="/login" className="font-bold hover:underline decoration-2 underline-offset-4">Login</Link>
         </div>
         <div className="flex flex-col space-y-2">
