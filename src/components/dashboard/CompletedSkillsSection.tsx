@@ -1,3 +1,5 @@
+"use client"
+
 import { useUserProgress } from "@/hooks/useUserProgress"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
