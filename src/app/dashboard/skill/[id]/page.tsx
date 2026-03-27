@@ -11,8 +11,8 @@ export function generateStaticParams() {
   }))
 }
 
-export default async function SkillPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
+export default async function SkillPage({ params }: { params: { id: string } }) {
+  const id = params?.id
   const skill = getSkillBySlug(id)
 
   if (!skill) {

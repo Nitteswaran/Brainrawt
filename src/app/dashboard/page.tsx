@@ -12,18 +12,24 @@ import { ALL_SKILLS } from "@/lib/skills-data"
 export default async function DashboardPage({
   searchParams,
 }: {
-  searchParams: Promise<{ upgraded?: string }>;
+  searchParams: { upgraded?: string };
 }) {
   const clerkUser = await currentUser();
-  const { upgraded } = await searchParams;
+  const upgraded = searchParams?.upgraded;
 
   // Fetch completed skills from DB
-  const completedSkills = clerkUser 
-    ? await prisma.userProgress.findMany({
+  let completedSkills: { skillId: string }[] = [];
+  try {
+    if (clerkUser) {
+      completedSkills = await prisma.userProgress.findMany({
         where: { userId: clerkUser.id, completed: true },
         select: { skillId: true }
-      })
-    : [];
+      });
+    }
+  } catch (error) {
+    console.error("Database connection failed during dashboard render:", error);
+    // Continue with empty completed skills - the page will render but show nothing completed
+  }
   
   const completedIds = new Set(completedSkills.map(s => s.skillId));
   
