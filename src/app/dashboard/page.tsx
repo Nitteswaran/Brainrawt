@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic"
 import { currentUser } from "@clerk/nextjs/server"
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
