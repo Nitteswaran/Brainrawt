@@ -11,6 +11,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Brainrawt - Micro learning platform",
   description: "Learn 1 useful skill every day in under 5 minutes.",
+  verification: {
+    google: "4wKk4ozcZMmm5x68EdGjRamvBDoQQZ00Otg0pdWIccU",
+  },
 };
 
 import Navbar from "@/components/layout/Navbar"
