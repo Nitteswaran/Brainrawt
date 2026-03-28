@@ -463,6 +463,754 @@ export const ALL_SKILLS: SkillData[] = [
       { question: "When can you reset your day?", options: ["Only in the morning", "Only before noon", "At any time", "Only on weekdays"], answer: "At any time" }
     ]
   },
+  // === Criminology ===
+  {
+    slug: s("Routine Activity Theory"), title: "Routine Activity Theory", category: "Criminology", categoryIcon: "🕵️",
+    summary: "Crime happens when 3 things align: motivated offender + suitable target + lack of guardian.",
+    lesson: "A quick introduction to Routine Activity Theory. Crime happens when 3 things align: motivated offender + suitable target + lack of guardian.",
+    example: "Applying Routine Activity Theory in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Routine Activity Theory today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Routine Activity Theory?", options: ["Option A", "Crime happens when 3 things align: motivated offender + suitable target + lack of guardian.", "Option C", "Option D"], answer: "Crime happens when 3 things align: motivated offender + suitable target + lack of guardian." },
+      { question: "How can you apply Routine Activity Theory?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Types of Crime"), title: "Types of Crime", category: "Criminology", categoryIcon: "🕵️",
+    summary: "Violent, property, white-collar, cybercrime-each has different motives and patterns.",
+    lesson: "A quick introduction to Types of Crime. Violent, property, white-collar, cybercrime-each has different motives and patterns.",
+    example: "Applying Types of Crime in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Types of Crime today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Types of Crime?", options: ["Option A", "Violent, property, white-collar, cybercrime-each has different motives and patterns.", "Option C", "Option D"], answer: "Violent, property, white-collar, cybercrime-each has different motives and patterns." },
+      { question: "How can you apply Types of Crime?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Criminal Profiling Basics"), title: "Criminal Profiling Basics", category: "Criminology", categoryIcon: "🕵️",
+    summary: "Behavior patterns can hint at personality traits, but it's not 100% accurate.",
+    lesson: "A quick introduction to Criminal Profiling Basics. Behavior patterns can hint at personality traits, but it's not 100% accurate.",
+    example: "Applying Criminal Profiling Basics in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Criminal Profiling Basics today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Criminal Profiling Basics?", options: ["Option A", "Behavior patterns can hint at personality traits, but it's not 100% accurate.", "Option C", "Option D"], answer: "Behavior patterns can hint at personality traits, but it's not 100% accurate." },
+      { question: "How can you apply Criminal Profiling Basics?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Philosophy ===
+  {
+    slug: s("Stoicism in 1 Minute"), title: "Stoicism in 1 Minute", category: "Philosophy", categoryIcon: "🗿",
+    summary: "Focus only on what you can control. Ignore the rest.",
+    lesson: "A quick introduction to Stoicism in 1 Minute. Focus only on what you can control. Ignore the rest.",
+    example: "Applying Stoicism in 1 Minute in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Stoicism in 1 Minute today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Stoicism in 1 Minute?", options: ["Option A", "Focus only on what you can control. Ignore the rest.", "Option C", "Option D"], answer: "Focus only on what you can control. Ignore the rest." },
+      { question: "How can you apply Stoicism in 1 Minute?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Utilitarianism"), title: "Utilitarianism", category: "Philosophy", categoryIcon: "🗿",
+    summary: "The best action = the one that maximizes overall happiness.",
+    lesson: "A quick introduction to Utilitarianism. The best action = the one that maximizes overall happiness.",
+    example: "Applying Utilitarianism in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Utilitarianism today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Utilitarianism?", options: ["Option A", "The best action = the one that maximizes overall happiness.", "Option C", "Option D"], answer: "The best action = the one that maximizes overall happiness." },
+      { question: "How can you apply Utilitarianism?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("The Trolley Problem"), title: "The Trolley Problem", category: "Philosophy", categoryIcon: "🗿",
+    summary: "Would you sacrifice 1 person to save 5? Ethics isn't always clear.",
+    lesson: "A quick introduction to The Trolley Problem. Would you sacrifice 1 person to save 5? Ethics isn't always clear.",
+    example: "Applying The Trolley Problem in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of The Trolley Problem today and write it down.",
+    quiz: [
+      { question: "What is the core idea of The Trolley Problem?", options: ["Option A", "Would you sacrifice 1 person to save 5? Ethics isn't always clear.", "Option C", "Option D"], answer: "Would you sacrifice 1 person to save 5? Ethics isn't always clear." },
+      { question: "How can you apply The Trolley Problem?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Statistics ===
+  {
+    slug: s("Mean vs Median"), title: "Mean vs Median", category: "Statistics", categoryIcon: "📈",
+    summary: "Mean = average, Median = middle value (better for skewed data)",
+    lesson: "A quick introduction to Mean vs Median. Mean = average, Median = middle value (better for skewed data)",
+    example: "Applying Mean vs Median in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Mean vs Median today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Mean vs Median?", options: ["Option A", "Mean = average, Median = middle value (better for skewed data)", "Option C", "Option D"], answer: "Mean = average, Median = middle value (better for skewed data)" },
+      { question: "How can you apply Mean vs Median?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Correlation != Causation"), title: "Correlation != Causation", category: "Statistics", categoryIcon: "📈",
+    summary: "Just because two things move together doesn't mean one causes the other.",
+    lesson: "A quick introduction to Correlation != Causation. Just because two things move together doesn't mean one causes the other.",
+    example: "Applying Correlation != Causation in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Correlation != Causation today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Correlation != Causation?", options: ["Option A", "Just because two things move together doesn't mean one causes the other.", "Option C", "Option D"], answer: "Just because two things move together doesn't mean one causes the other." },
+      { question: "How can you apply Correlation != Causation?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Standard Deviation"), title: "Standard Deviation", category: "Statistics", categoryIcon: "📈",
+    summary: "Measures how spread out data is from the average.",
+    lesson: "A quick introduction to Standard Deviation. Measures how spread out data is from the average.",
+    example: "Applying Standard Deviation in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Standard Deviation today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Standard Deviation?", options: ["Option A", "Measures how spread out data is from the average.", "Option C", "Option D"], answer: "Measures how spread out data is from the average." },
+      { question: "How can you apply Standard Deviation?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Biology ===
+  {
+    slug: s("DNA Basics"), title: "DNA Basics", category: "Biology", categoryIcon: "🧬",
+    summary: "DNA stores instructions for building proteins.",
+    lesson: "A quick introduction to DNA Basics. DNA stores instructions for building proteins.",
+    example: "Applying DNA Basics in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of DNA Basics today and write it down.",
+    quiz: [
+      { question: "What is the core idea of DNA Basics?", options: ["Option A", "DNA stores instructions for building proteins.", "Option C", "Option D"], answer: "DNA stores instructions for building proteins." },
+      { question: "How can you apply DNA Basics?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Natural Selection"), title: "Natural Selection", category: "Biology", categoryIcon: "🧬",
+    summary: "Survival of traits that improve reproduction.",
+    lesson: "A quick introduction to Natural Selection. Survival of traits that improve reproduction.",
+    example: "Applying Natural Selection in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Natural Selection today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Natural Selection?", options: ["Option A", "Survival of traits that improve reproduction.", "Option C", "Option D"], answer: "Survival of traits that improve reproduction." },
+      { question: "How can you apply Natural Selection?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Cells 101"), title: "Cells 101", category: "Biology", categoryIcon: "🧬",
+    summary: "Cells = basic unit of life (prokaryotic vs eukaryotic).",
+    lesson: "A quick introduction to Cells 101. Cells = basic unit of life (prokaryotic vs eukaryotic).",
+    example: "Applying Cells 101 in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Cells 101 today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Cells 101?", options: ["Option A", "Cells = basic unit of life (prokaryotic vs eukaryotic).", "Option C", "Option D"], answer: "Cells = basic unit of life (prokaryotic vs eukaryotic)." },
+      { question: "How can you apply Cells 101?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Geography ===
+  {
+    slug: s("Plate Tectonics"), title: "Plate Tectonics", category: "Geography", categoryIcon: "🌍",
+    summary: "Earth's crust is made of moving plates -> earthquakes & volcanoes.",
+    lesson: "A quick introduction to Plate Tectonics. Earth's crust is made of moving plates -> earthquakes & volcanoes.",
+    example: "Applying Plate Tectonics in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Plate Tectonics today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Plate Tectonics?", options: ["Option A", "Earth's crust is made of moving plates -> earthquakes & volcanoes.", "Option C", "Option D"], answer: "Earth's crust is made of moving plates -> earthquakes & volcanoes." },
+      { question: "How can you apply Plate Tectonics?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Climate vs Weather"), title: "Climate vs Weather", category: "Geography", categoryIcon: "🌍",
+    summary: "Weather = short-term, Climate = long-term patterns",
+    lesson: "A quick introduction to Climate vs Weather. Weather = short-term, Climate = long-term patterns",
+    example: "Applying Climate vs Weather in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Climate vs Weather today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Climate vs Weather?", options: ["Option A", "Weather = short-term, Climate = long-term patterns", "Option C", "Option D"], answer: "Weather = short-term, Climate = long-term patterns" },
+      { question: "How can you apply Climate vs Weather?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Population Density"), title: "Population Density", category: "Geography", categoryIcon: "🌍",
+    summary: "People per area affects economy, housing, and resources.",
+    lesson: "A quick introduction to Population Density. People per area affects economy, housing, and resources.",
+    example: "Applying Population Density in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Population Density today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Population Density?", options: ["Option A", "People per area affects economy, housing, and resources.", "Option C", "Option D"], answer: "People per area affects economy, housing, and resources." },
+      { question: "How can you apply Population Density?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Engineering ===
+  {
+    slug: s("Systems Thinking"), title: "Systems Thinking", category: "Engineering", categoryIcon: "⚙️",
+    summary: "Everything is connected-optimize the whole, not just parts.",
+    lesson: "A quick introduction to Systems Thinking. Everything is connected-optimize the whole, not just parts.",
+    example: "Applying Systems Thinking in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Systems Thinking today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Systems Thinking?", options: ["Option A", "Everything is connected-optimize the whole, not just parts.", "Option C", "Option D"], answer: "Everything is connected-optimize the whole, not just parts." },
+      { question: "How can you apply Systems Thinking?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Trade-offs"), title: "Trade-offs", category: "Engineering", categoryIcon: "⚙️",
+    summary: "Better performance often = higher cost or complexity.",
+    lesson: "A quick introduction to Trade-offs. Better performance often = higher cost or complexity.",
+    example: "Applying Trade-offs in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Trade-offs today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Trade-offs?", options: ["Option A", "Better performance often = higher cost or complexity.", "Option C", "Option D"], answer: "Better performance often = higher cost or complexity." },
+      { question: "How can you apply Trade-offs?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Feedback Loops"), title: "Feedback Loops", category: "Engineering", categoryIcon: "⚙️",
+    summary: "Systems improve (or fail) based on feedback.",
+    lesson: "A quick introduction to Feedback Loops. Systems improve (or fail) based on feedback.",
+    example: "Applying Feedback Loops in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Feedback Loops today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Feedback Loops?", options: ["Option A", "Systems improve (or fail) based on feedback.", "Option C", "Option D"], answer: "Systems improve (or fail) based on feedback." },
+      { question: "How can you apply Feedback Loops?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Cinema ===
+  {
+    slug: s("Rule of Thirds"), title: "Rule of Thirds", category: "Cinema", categoryIcon: "🎞️",
+    summary: "Divide screen into 3x3 grid for better composition.",
+    lesson: "A quick introduction to Rule of Thirds. Divide screen into 3x3 grid for better composition.",
+    example: "Applying Rule of Thirds in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Rule of Thirds today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Rule of Thirds?", options: ["Option A", "Divide screen into 3x3 grid for better composition.", "Option C", "Option D"], answer: "Divide screen into 3x3 grid for better composition." },
+      { question: "How can you apply Rule of Thirds?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Show, Don't Tell"), title: "Show, Don't Tell", category: "Cinema", categoryIcon: "🎞️",
+    summary: "Visual storytelling > dialogue.",
+    lesson: "A quick introduction to Show, Don't Tell. Visual storytelling > dialogue.",
+    example: "Applying Show, Don't Tell in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Show, Don't Tell today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Show, Don't Tell?", options: ["Option A", "Visual storytelling > dialogue.", "Option C", "Option D"], answer: "Visual storytelling > dialogue." },
+      { question: "How can you apply Show, Don't Tell?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Shot Types"), title: "Shot Types", category: "Cinema", categoryIcon: "🎞️",
+    summary: "Close-up = emotion, Wide shot = context",
+    lesson: "A quick introduction to Shot Types. Close-up = emotion, Wide shot = context",
+    example: "Applying Shot Types in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Shot Types today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Shot Types?", options: ["Option A", "Close-up = emotion, Wide shot = context", "Option C", "Option D"], answer: "Close-up = emotion, Wide shot = context" },
+      { question: "How can you apply Shot Types?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Personal Finance ===
+  {
+    slug: s("50/30/20 Rule"), title: "50/30/20 Rule", category: "Personal Finance", categoryIcon: "💰",
+    summary: "50% needs, 30% wants, 20% savings.",
+    lesson: "A quick introduction to 50/30/20 Rule. 50% needs, 30% wants, 20% savings.",
+    example: "Applying 50/30/20 Rule in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of 50/30/20 Rule today and write it down.",
+    quiz: [
+      { question: "What is the core idea of 50/30/20 Rule?", options: ["Option A", "50% needs, 30% wants, 20% savings.", "Option C", "Option D"], answer: "50% needs, 30% wants, 20% savings." },
+      { question: "How can you apply 50/30/20 Rule?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Compound Interest"), title: "Compound Interest", category: "Personal Finance", categoryIcon: "💰",
+    summary: "Money grows exponentially over time.",
+    lesson: "A quick introduction to Compound Interest. Money grows exponentially over time.",
+    example: "Applying Compound Interest in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Compound Interest today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Compound Interest?", options: ["Option A", "Money grows exponentially over time.", "Option C", "Option D"], answer: "Money grows exponentially over time." },
+      { question: "How can you apply Compound Interest?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Emergency Fund"), title: "Emergency Fund", category: "Personal Finance", categoryIcon: "💰",
+    summary: "Save 3-6 months of expenses.",
+    lesson: "A quick introduction to Emergency Fund. Save 3-6 months of expenses.",
+    example: "Applying Emergency Fund in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Emergency Fund today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Emergency Fund?", options: ["Option A", "Save 3-6 months of expenses.", "Option C", "Option D"], answer: "Save 3-6 months of expenses." },
+      { question: "How can you apply Emergency Fund?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Space ===
+  {
+    slug: s("Light-Year"), title: "Light-Year", category: "Space", categoryIcon: "🚀",
+    summary: "Distance light travels in a year (~9.46 trillion km).",
+    lesson: "A quick introduction to Light-Year. Distance light travels in a year (~9.46 trillion km).",
+    example: "Applying Light-Year in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Light-Year today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Light-Year?", options: ["Option A", "Distance light travels in a year (~9.46 trillion km).", "Option C", "Option D"], answer: "Distance light travels in a year (~9.46 trillion km)." },
+      { question: "How can you apply Light-Year?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Black Holes"), title: "Black Holes", category: "Space", categoryIcon: "🚀",
+    summary: "Gravity so strong, not even light escape.",
+    lesson: "A quick introduction to Black Holes. Gravity so strong, not even light escape.",
+    example: "Applying Black Holes in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Black Holes today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Black Holes?", options: ["Option A", "Gravity so strong, not even light escape.", "Option C", "Option D"], answer: "Gravity so strong, not even light escape." },
+      { question: "How can you apply Black Holes?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Habitable Zone"), title: "Habitable Zone", category: "Space", categoryIcon: "🚀",
+    summary: "Area where liquid water can exist.",
+    lesson: "A quick introduction to Habitable Zone. Area where liquid water can exist.",
+    example: "Applying Habitable Zone in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Habitable Zone today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Habitable Zone?", options: ["Option A", "Area where liquid water can exist.", "Option C", "Option D"], answer: "Area where liquid water can exist." },
+      { question: "How can you apply Habitable Zone?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Psychology ===
+  {
+    slug: s("Dopamine Loop"), title: "Dopamine Loop", category: "Psychology", categoryIcon: "🧠",
+    summary: "Rewards -> repeat behavior (addiction mechanism).",
+    lesson: "A quick introduction to Dopamine Loop. Rewards -> repeat behavior (addiction mechanism).",
+    example: "Applying Dopamine Loop in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Dopamine Loop today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Dopamine Loop?", options: ["Option A", "Rewards -> repeat behavior (addiction mechanism).", "Option C", "Option D"], answer: "Rewards -> repeat behavior (addiction mechanism)." },
+      { question: "How can you apply Dopamine Loop?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Cognitive Bias"), title: "Cognitive Bias", category: "Psychology", categoryIcon: "🧠",
+    summary: "Your brain takes shortcuts -> often wrong decisions.",
+    lesson: "A quick introduction to Cognitive Bias. Your brain takes shortcuts -> often wrong decisions.",
+    example: "Applying Cognitive Bias in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Cognitive Bias today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Cognitive Bias?", options: ["Option A", "Your brain takes shortcuts -> often wrong decisions.", "Option C", "Option D"], answer: "Your brain takes shortcuts -> often wrong decisions." },
+      { question: "How can you apply Cognitive Bias?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Maslow's Hierarchy"), title: "Maslow's Hierarchy", category: "Psychology", categoryIcon: "🧠",
+    summary: "Needs: survival -> safety -> love -> esteem -> self-actualization.",
+    lesson: "A quick introduction to Maslow's Hierarchy. Needs: survival -> safety -> love -> esteem -> self-actualization.",
+    example: "Applying Maslow's Hierarchy in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Maslow's Hierarchy today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Maslow's Hierarchy?", options: ["Option A", "Needs: survival -> safety -> love -> esteem -> self-actualization.", "Option C", "Option D"], answer: "Needs: survival -> safety -> love -> esteem -> self-actualization." },
+      { question: "How can you apply Maslow's Hierarchy?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Literature ===
+  {
+    slug: s("Themes vs Plot"), title: "Themes vs Plot", category: "Literature", categoryIcon: "📖",
+    summary: "Plot = what happens, Theme = what it means",
+    lesson: "A quick introduction to Themes vs Plot. Plot = what happens, Theme = what it means",
+    example: "Applying Themes vs Plot in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Themes vs Plot today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Themes vs Plot?", options: ["Option A", "Plot = what happens, Theme = what it means", "Option C", "Option D"], answer: "Plot = what happens, Theme = what it means" },
+      { question: "How can you apply Themes vs Plot?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Foreshadowing"), title: "Foreshadowing", category: "Literature", categoryIcon: "📖",
+    summary: "Hints about future events.",
+    lesson: "A quick introduction to Foreshadowing. Hints about future events.",
+    example: "Applying Foreshadowing in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Foreshadowing today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Foreshadowing?", options: ["Option A", "Hints about future events.", "Option C", "Option D"], answer: "Hints about future events." },
+      { question: "How can you apply Foreshadowing?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Archetypes"), title: "Archetypes", category: "Literature", categoryIcon: "📖",
+    summary: "Common character types (hero, mentor, villain).",
+    lesson: "A quick introduction to Archetypes. Common character types (hero, mentor, villain).",
+    example: "Applying Archetypes in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Archetypes today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Archetypes?", options: ["Option A", "Common character types (hero, mentor, villain).", "Option C", "Option D"], answer: "Common character types (hero, mentor, villain)." },
+      { question: "How can you apply Archetypes?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Art ===
+  {
+    slug: s("Color Theory"), title: "Color Theory", category: "Art", categoryIcon: "🖼",
+    summary: "Warm = energy, Cool = calm",
+    lesson: "A quick introduction to Color Theory. Warm = energy, Cool = calm",
+    example: "Applying Color Theory in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Color Theory today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Color Theory?", options: ["Option A", "Warm = energy, Cool = calm", "Option C", "Option D"], answer: "Warm = energy, Cool = calm" },
+      { question: "How can you apply Color Theory?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Contrast"), title: "Contrast", category: "Art", categoryIcon: "🖼",
+    summary: "Differences draw attention.",
+    lesson: "A quick introduction to Contrast. Differences draw attention.",
+    example: "Applying Contrast in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Contrast today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Contrast?", options: ["Option A", "Differences draw attention.", "Option C", "Option D"], answer: "Differences draw attention." },
+      { question: "How can you apply Contrast?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Negative Space"), title: "Negative Space", category: "Art", categoryIcon: "🖼",
+    summary: "Empty space improves composition.",
+    lesson: "A quick introduction to Negative Space. Empty space improves composition.",
+    example: "Applying Negative Space in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Negative Space today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Negative Space?", options: ["Option A", "Empty space improves composition.", "Option C", "Option D"], answer: "Empty space improves composition." },
+      { question: "How can you apply Negative Space?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === History ===
+  {
+    slug: s("Cause & Effect"), title: "Cause & Effect", category: "History", categoryIcon: "🏺",
+    summary: "Events happen due to multiple causes-not just one.",
+    lesson: "A quick introduction to Cause & Effect. Events happen due to multiple causes-not just one.",
+    example: "Applying Cause & Effect in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Cause & Effect today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Cause & Effect?", options: ["Option A", "Events happen due to multiple causes-not just one.", "Option C", "Option D"], answer: "Events happen due to multiple causes-not just one." },
+      { question: "How can you apply Cause & Effect?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Bias in History"), title: "Bias in History", category: "History", categoryIcon: "🏺",
+    summary: "History is written from perspectives.",
+    lesson: "A quick introduction to Bias in History. History is written from perspectives.",
+    example: "Applying Bias in History in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Bias in History today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Bias in History?", options: ["Option A", "History is written from perspectives.", "Option C", "Option D"], answer: "History is written from perspectives." },
+      { question: "How can you apply Bias in History?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Revolutions Pattern"), title: "Revolutions Pattern", category: "History", categoryIcon: "🏺",
+    summary: "Inequality -> unrest -> change.",
+    lesson: "A quick introduction to Revolutions Pattern. Inequality -> unrest -> change.",
+    example: "Applying Revolutions Pattern in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Revolutions Pattern today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Revolutions Pattern?", options: ["Option A", "Inequality -> unrest -> change.", "Option C", "Option D"], answer: "Inequality -> unrest -> change." },
+      { question: "How can you apply Revolutions Pattern?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Food ===
+  {
+    slug: s("Macronutrients"), title: "Macronutrients", category: "Food", categoryIcon: "🥑",
+    summary: "Protein, carbs, fats = energy sources.",
+    lesson: "A quick introduction to Macronutrients. Protein, carbs, fats = energy sources.",
+    example: "Applying Macronutrients in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Macronutrients today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Macronutrients?", options: ["Option A", "Protein, carbs, fats = energy sources.", "Option C", "Option D"], answer: "Protein, carbs, fats = energy sources." },
+      { question: "How can you apply Macronutrients?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Maillard Reaction"), title: "Maillard Reaction", category: "Food", categoryIcon: "🥑",
+    summary: "Browning = flavor (grilling, frying).",
+    lesson: "A quick introduction to Maillard Reaction. Browning = flavor (grilling, frying).",
+    example: "Applying Maillard Reaction in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Maillard Reaction today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Maillard Reaction?", options: ["Option A", "Browning = flavor (grilling, frying).", "Option C", "Option D"], answer: "Browning = flavor (grilling, frying)." },
+      { question: "How can you apply Maillard Reaction?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Calories"), title: "Calories", category: "Food", categoryIcon: "🥑",
+    summary: "Energy unit-intake vs burn determines weight.",
+    lesson: "A quick introduction to Calories. Energy unit-intake vs burn determines weight.",
+    example: "Applying Calories in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Calories today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Calories?", options: ["Option A", "Energy unit-intake vs burn determines weight.", "Option C", "Option D"], answer: "Energy unit-intake vs burn determines weight." },
+      { question: "How can you apply Calories?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Architecture ===
+  {
+    slug: s("Form vs Function"), title: "Form vs Function", category: "Architecture", categoryIcon: "🏛️",
+    summary: "Design must balance beauty and usability.",
+    lesson: "A quick introduction to Form vs Function. Design must balance beauty and usability.",
+    example: "Applying Form vs Function in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Form vs Function today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Form vs Function?", options: ["Option A", "Design must balance beauty and usability.", "Option C", "Option D"], answer: "Design must balance beauty and usability." },
+      { question: "How can you apply Form vs Function?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Load Distribution"), title: "Load Distribution", category: "Architecture", categoryIcon: "🏛️",
+    summary: "Structures must evenly spread weight.",
+    lesson: "A quick introduction to Load Distribution. Structures must evenly spread weight.",
+    example: "Applying Load Distribution in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Load Distribution today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Load Distribution?", options: ["Option A", "Structures must evenly spread weight.", "Option C", "Option D"], answer: "Structures must evenly spread weight." },
+      { question: "How can you apply Load Distribution?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Materials Matter"), title: "Materials Matter", category: "Architecture", categoryIcon: "🏛️",
+    summary: "Concrete, steel, wood all behave differently.",
+    lesson: "A quick introduction to Materials Matter. Concrete, steel, wood all behave differently.",
+    example: "Applying Materials Matter in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Materials Matter today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Materials Matter?", options: ["Option A", "Concrete, steel, wood all behave differently.", "Option C", "Option D"], answer: "Concrete, steel, wood all behave differently." },
+      { question: "How can you apply Materials Matter?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Fashion ===
+  {
+    slug: s("Fit > Brand"), title: "Fit > Brand", category: "Fashion", categoryIcon: "👠",
+    summary: "Well-fitted cheap clothes > expensive bad fit.",
+    lesson: "A quick introduction to Fit > Brand. Well-fitted cheap clothes > expensive bad fit.",
+    example: "Applying Fit > Brand in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Fit > Brand today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Fit > Brand?", options: ["Option A", "Well-fitted cheap clothes > expensive bad fit.", "Option C", "Option D"], answer: "Well-fitted cheap clothes > expensive bad fit." },
+      { question: "How can you apply Fit > Brand?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Color Matching"), title: "Color Matching", category: "Fashion", categoryIcon: "👠",
+    summary: "Neutral colors are easiest to style.",
+    lesson: "A quick introduction to Color Matching. Neutral colors are easiest to style.",
+    example: "Applying Color Matching in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Color Matching today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Color Matching?", options: ["Option A", "Neutral colors are easiest to style.", "Option C", "Option D"], answer: "Neutral colors are easiest to style." },
+      { question: "How can you apply Color Matching?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Capsule Wardrobe"), title: "Capsule Wardrobe", category: "Fashion", categoryIcon: "👠",
+    summary: "Few versatile pieces > many random outfits.",
+    lesson: "A quick introduction to Capsule Wardrobe. Few versatile pieces > many random outfits.",
+    example: "Applying Capsule Wardrobe in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Capsule Wardrobe today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Capsule Wardrobe?", options: ["Option A", "Few versatile pieces > many random outfits.", "Option C", "Option D"], answer: "Few versatile pieces > many random outfits." },
+      { question: "How can you apply Capsule Wardrobe?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Music ===
+  {
+    slug: s("Rhythm"), title: "Rhythm", category: "Music", categoryIcon: "🎵",
+    summary: "Timing of beats.",
+    lesson: "A quick introduction to Rhythm. Timing of beats.",
+    example: "Applying Rhythm in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Rhythm today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Rhythm?", options: ["Option A", "Timing of beats.", "Option C", "Option D"], answer: "Timing of beats." },
+      { question: "How can you apply Rhythm?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Melody vs Harmony"), title: "Melody vs Harmony", category: "Music", categoryIcon: "🎵",
+    summary: "Melody = main tune, Harmony = supporting notes",
+    lesson: "A quick introduction to Melody vs Harmony. Melody = main tune, Harmony = supporting notes",
+    example: "Applying Melody vs Harmony in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Melody vs Harmony today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Melody vs Harmony?", options: ["Option A", "Melody = main tune, Harmony = supporting notes", "Option C", "Option D"], answer: "Melody = main tune, Harmony = supporting notes" },
+      { question: "How can you apply Melody vs Harmony?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Chord Progressions"), title: "Chord Progressions", category: "Music", categoryIcon: "🎵",
+    summary: "Patterns that create emotional feel.",
+    lesson: "A quick introduction to Chord Progressions. Patterns that create emotional feel.",
+    example: "Applying Chord Progressions in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Chord Progressions today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Chord Progressions?", options: ["Option A", "Patterns that create emotional feel.", "Option C", "Option D"], answer: "Patterns that create emotional feel." },
+      { question: "How can you apply Chord Progressions?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Religion ===
+  {
+    slug: s("Core Purpose"), title: "Core Purpose", category: "Religion", categoryIcon: "🙏",
+    summary: "Explains existence, morality, and meaning.",
+    lesson: "A quick introduction to Core Purpose. Explains existence, morality, and meaning.",
+    example: "Applying Core Purpose in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Core Purpose today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Core Purpose?", options: ["Option A", "Explains existence, morality, and meaning.", "Option C", "Option D"], answer: "Explains existence, morality, and meaning." },
+      { question: "How can you apply Core Purpose?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Rituals"), title: "Rituals", category: "Religion", categoryIcon: "🙏",
+    summary: "Repeated actions that reinforce belief.",
+    lesson: "A quick introduction to Rituals. Repeated actions that reinforce belief.",
+    example: "Applying Rituals in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Rituals today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Rituals?", options: ["Option A", "Repeated actions that reinforce belief.", "Option C", "Option D"], answer: "Repeated actions that reinforce belief." },
+      { question: "How can you apply Rituals?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Sacred Texts"), title: "Sacred Texts", category: "Religion", categoryIcon: "🙏",
+    summary: "Guidelines for followers.",
+    lesson: "A quick introduction to Sacred Texts. Guidelines for followers.",
+    example: "Applying Sacred Texts in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Sacred Texts today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Sacred Texts?", options: ["Option A", "Guidelines for followers.", "Option C", "Option D"], answer: "Guidelines for followers." },
+      { question: "How can you apply Sacred Texts?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Artificial Intelligence ===
+  {
+    slug: s("Machine Learning"), title: "Machine Learning", category: "Artificial Intelligence", categoryIcon: "✨",
+    summary: "AI learns patterns from data.",
+    lesson: "A quick introduction to Machine Learning. AI learns patterns from data.",
+    example: "Applying Machine Learning in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Machine Learning today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Machine Learning?", options: ["Option A", "AI learns patterns from data.", "Option C", "Option D"], answer: "AI learns patterns from data." },
+      { question: "How can you apply Machine Learning?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Neural Networks"), title: "Neural Networks", category: "Artificial Intelligence", categoryIcon: "✨",
+    summary: "Models inspired by the human brain.",
+    lesson: "A quick introduction to Neural Networks. Models inspired by the human brain.",
+    example: "Applying Neural Networks in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Neural Networks today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Neural Networks?", options: ["Option A", "Models inspired by the human brain.", "Option C", "Option D"], answer: "Models inspired by the human brain." },
+      { question: "How can you apply Neural Networks?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Prompt Engineering"), title: "Prompt Engineering", category: "Artificial Intelligence", categoryIcon: "✨",
+    summary: "Better input = better AI output.",
+    lesson: "A quick introduction to Prompt Engineering. Better input = better AI output.",
+    example: "Applying Prompt Engineering in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Prompt Engineering today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Prompt Engineering?", options: ["Option A", "Better input = better AI output.", "Option C", "Option D"], answer: "Better input = better AI output." },
+      { question: "How can you apply Prompt Engineering?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Paleontology ===
+  {
+    slug: s("Fossilization"), title: "Fossilization", category: "Paleontology", categoryIcon: "🦴",
+    summary: "Remains preserved in rock over time.",
+    lesson: "A quick introduction to Fossilization. Remains preserved in rock over time.",
+    example: "Applying Fossilization in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Fossilization today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Fossilization?", options: ["Option A", "Remains preserved in rock over time.", "Option C", "Option D"], answer: "Remains preserved in rock over time." },
+      { question: "How can you apply Fossilization?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Dinosaur Eras"), title: "Dinosaur Eras", category: "Paleontology", categoryIcon: "🦴",
+    summary: "Triassic -> Jurassic -> Cretaceous.",
+    lesson: "A quick introduction to Dinosaur Eras. Triassic -> Jurassic -> Cretaceous.",
+    example: "Applying Dinosaur Eras in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Dinosaur Eras today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Dinosaur Eras?", options: ["Option A", "Triassic -> Jurassic -> Cretaceous.", "Option C", "Option D"], answer: "Triassic -> Jurassic -> Cretaceous." },
+      { question: "How can you apply Dinosaur Eras?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Extinction Events"), title: "Extinction Events", category: "Paleontology", categoryIcon: "🦴",
+    summary: "Mass die-offs reshape life.",
+    lesson: "A quick introduction to Extinction Events. Mass die-offs reshape life.",
+    example: "Applying Extinction Events in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Extinction Events today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Extinction Events?", options: ["Option A", "Mass die-offs reshape life.", "Option C", "Option D"], answer: "Mass die-offs reshape life." },
+      { question: "How can you apply Extinction Events?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Math ===
+  {
+    slug: s("Order of Operations"), title: "Order of Operations", category: "Math", categoryIcon: "📐",
+    summary: "PEMDAS: Parentheses, Exponents, Multiply, Divide, Add, Subtract.",
+    lesson: "A quick introduction to Order of Operations. PEMDAS: Parentheses, Exponents, Multiply, Divide, Add, Subtract.",
+    example: "Applying Order of Operations in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Order of Operations today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Order of Operations?", options: ["Option A", "PEMDAS: Parentheses, Exponents, Multiply, Divide, Add, Subtract.", "Option C", "Option D"], answer: "PEMDAS: Parentheses, Exponents, Multiply, Divide, Add, Subtract." },
+      { question: "How can you apply Order of Operations?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Functions"), title: "Functions", category: "Math", categoryIcon: "📐",
+    summary: "Input -> process -> output.",
+    lesson: "A quick introduction to Functions. Input -> process -> output.",
+    example: "Applying Functions in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Functions today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Functions?", options: ["Option A", "Input -> process -> output.", "Option C", "Option D"], answer: "Input -> process -> output." },
+      { question: "How can you apply Functions?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Exponents"), title: "Exponents", category: "Math", categoryIcon: "📐",
+    summary: "Repeated multiplication.",
+    lesson: "A quick introduction to Exponents. Repeated multiplication.",
+    example: "Applying Exponents in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Exponents today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Exponents?", options: ["Option A", "Repeated multiplication.", "Option C", "Option D"], answer: "Repeated multiplication." },
+      { question: "How can you apply Exponents?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  // === Logic ===
+  {
+    slug: s("Deductive Reasoning"), title: "Deductive Reasoning", category: "Logic", categoryIcon: "🤔",
+    summary: "General -> specific (always true if logic is valid).",
+    lesson: "A quick introduction to Deductive Reasoning. General -> specific (always true if logic is valid).",
+    example: "Applying Deductive Reasoning in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Deductive Reasoning today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Deductive Reasoning?", options: ["Option A", "General -> specific (always true if logic is valid).", "Option C", "Option D"], answer: "General -> specific (always true if logic is valid)." },
+      { question: "How can you apply Deductive Reasoning?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Inductive Reasoning"), title: "Inductive Reasoning", category: "Logic", categoryIcon: "🤔",
+    summary: "Specific -> general (probable, not certain).",
+    lesson: "A quick introduction to Inductive Reasoning. Specific -> general (probable, not certain).",
+    example: "Applying Inductive Reasoning in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Inductive Reasoning today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Inductive Reasoning?", options: ["Option A", "Specific -> general (probable, not certain).", "Option C", "Option D"], answer: "Specific -> general (probable, not certain)." },
+      { question: "How can you apply Inductive Reasoning?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
+  {
+    slug: s("Logical Fallacies"), title: "Logical Fallacies", category: "Logic", categoryIcon: "🤔",
+    summary: "Common thinking errors (e.g. strawman, ad hominem).",
+    lesson: "A quick introduction to Logical Fallacies. Common thinking errors (e.g. strawman, ad hominem).",
+    example: "Applying Logical Fallacies in daily life helps clarify concepts quickly.",
+    challenge: "Think of an example of Logical Fallacies today and write it down.",
+    quiz: [
+      { question: "What is the core idea of Logical Fallacies?", options: ["Option A", "Common thinking errors (e.g. strawman, ad hominem).", "Option C", "Option D"], answer: "Common thinking errors (e.g. strawman, ad hominem)." },
+      { question: "How can you apply Logical Fallacies?", options: ["It is too hard", "In daily practice", "Never", "I don't know"], answer: "In daily practice" }
+    ]
+  },
 ]
 
 export function getSkillBySlug(slug: string): SkillData | undefined {
