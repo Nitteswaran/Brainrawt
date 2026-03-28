@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface BlogPost {
   slug: string;
   title: string;
